@@ -43,11 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerations\EMessageType.cs" />
+    <Compile Include="Enumerations\EType.cs" />
+    <Compile Include="LogService.cs" />
+    <Compile Include="Messages\BaseMessage.cs" />
+    <Compile Include="Messages\ResultMessage.cs" />
+    <Compile Include="Messages\TextMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
