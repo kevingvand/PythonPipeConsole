@@ -1,5 +1,6 @@
 ﻿using PythonPipeServer.Enumerations;
 using PythonPipeServer.Messages;
+using PythonPipeServer.Python;
 using System;
 using System.IO;
 using System.IO.Pipes;
@@ -23,6 +24,10 @@ namespace PythonPipeServer
         public void Run()
         {
             _server = new NamedPipeServerStream(Name);
+
+            //TODO: dynamically program and start python client
+            PythonConsole console = new PythonConsole(Name);
+            console.Start();
 
             LogService.LogInfo("Waiting for connection...");
             _server.WaitForConnection();
